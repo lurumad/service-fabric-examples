@@ -3,7 +3,7 @@ using Microsoft.ServiceFabric.Actors;
 
 namespace Game.Interfaces
 {
-    public interface IGame : IActor
+    public interface IGame : IActor, IActorEventPublisher<IGameEvents>
     {
         Task<bool> JoinGameAsync(long playerId, string playerName);
         Task<int[]> GetGameBoardAsync();

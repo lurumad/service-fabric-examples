@@ -15,7 +15,7 @@ namespace TestClient
             var playerTwo = ActorProxy.Create<IPlayer>(ActorId.CreateRandom(), "fabric:/ActorTicTacToeApplication");
             var gameId = ActorId.CreateRandom();
             var game = ActorProxy.Create<IGame>(gameId, "fabric:/ActorTicTacToeApplication");
-            var rand = new Random();
+            game.SubscribeAsync(new GameEventsHandler()).Wait();
 
             var resultOne = playerOne.JoinGameAsync(gameId, "Player 1");
             var resultTwo = playerTwo.JoinGameAsync(gameId, "Player 2");

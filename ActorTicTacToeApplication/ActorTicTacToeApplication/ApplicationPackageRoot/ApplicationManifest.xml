@@ -28,7 +28,7 @@
         <SingletonPartition />
       </StatelessService>
     </Service>
-    <Service Name="GameActorService" GeneratedIdRef="e0bb6f25-e4aa-4a15-bb3f-29738be7a162|Persisted">
+    <Service Name="GameActorService" GeneratedIdRef="21ab1811-4c41-4723-b586-5897ae50cd38|Persisted">
       <StatefulService ServiceTypeName="GameActorServiceType" TargetReplicaSetSize="[GameActorService_TargetReplicaSetSize]" MinReplicaSetSize="[GameActorService_MinReplicaSetSize]">
         <UniformInt64Partition PartitionCount="[GameActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
       </StatefulService>

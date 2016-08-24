@@ -59,6 +59,9 @@ namespace Game
 
             await StateManager.SetStateAsync(StateName, gameState);
 
+            var evt = GetEvent<IGameEvents>();
+            evt.NewChallengeHasArrived(playerName);
+
             return true;
         }
 
